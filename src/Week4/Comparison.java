@@ -1,4 +1,4 @@
-package examples.talin.Exercises.Week4;
+package Week4;
 
 import java.util.ArrayList;
 import java.util.List;

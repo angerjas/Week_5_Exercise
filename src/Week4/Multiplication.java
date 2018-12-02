@@ -1,4 +1,4 @@
-package examples.talin.Exercises.Week4;
+package Week4;
 
 public class Multiplication {
 
