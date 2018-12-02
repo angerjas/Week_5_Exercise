@@ -2,6 +2,7 @@ package Week5;
 
 
 import java.util.Scanner;
+
 public class Repeater {
     /**
      * Objective: We want to print numbers with the amount of its value.
@@ -19,20 +20,28 @@ public class Repeater {
      */
     public static void main(String[] args) {
         Repeater repeater = new Repeater();
-        System.out.println("Welcome please enter the number");
-        Scanner scanner = new Scanner(System.in);
-        String incomingString = scanner.nextLine();
-        boolean isInteger = repeater.isInteger(incomingString);
-        if (isInteger) {
-            int data = Integer.parseInt(incomingString);
-            boolean isValid = repeater.isValid(data);
-            if (isValid) {
-                repeater.print(data);
+        while (true) {
+            System.out.println("Welcome please enter the number");
+            Scanner scanner = new Scanner(System.in);
+            String incomingString = scanner.nextLine();
+            if(incomingString.equalsIgnoreCase("exit")){
+                System.out.println("Shutting this shit down");
+                return;
             }
-        } else {
-            System.out.println("We only expect integer");
+
+            boolean isInteger = repeater.isInteger(incomingString);
+            if (isInteger) {
+                int data = Integer.parseInt(incomingString);
+                boolean isValid = repeater.isValid(data);
+                if (isValid) {
+                    repeater.print(data);
+                }
+            } else {
+                System.out.println("We only expect integer");
+            }
         }
     }
+
     private void print(int incomingNumber) {
         String result = "";
         for (int counter = 0; counter < incomingNumber; counter++) {
@@ -43,6 +52,7 @@ public class Repeater {
             System.out.println(incomingNumber);
         }
     }
+
     public boolean isInteger(String incomingString) {
         try {
             Integer.parseInt(incomingString);
@@ -51,6 +61,7 @@ public class Repeater {
             return false;
         }
     }
+
     private boolean isValid(int number) {
         if (number > 5) {
             System.out.println("We only expect integer");
