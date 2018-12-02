@@ -1,1 +1,0 @@
-package examples.talin.Exercises.Week5;/*TASK1: Reverse all words of sentence (Easy)Correct Example :sentence : Hello Worldresult : olleH dlroWIncorrect Example :sentence : Hello Worldresult : dlroW olleHHint : Each word should be reversed separately. */public class Task1_2_3 {}
